@@ -1,0 +1,44 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 13px;
+    font-family: tahoma;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.main {
+    margin: auto;
+    width: 400px;
+    padding: 10px;
+}
+
+.main .text-field {
+	width:400px;
+	height: 20px;
+	border-radius: 5px;
+	border: 1px solid #c9c9c9;
+	font-size: 14px;
+	padding: 5px;
+	margin: 8px 0 8px;
+}
+
+.main table {
+	width: 410px;
+	margin: 30px 0 0 0;
+}
+
+.main table, td, th {
+    border: 1px solid #c9c9c9;
+}
+
+.main table tr:nth-child(odd) {background: #CCC}
+
+.main #success {
+	color: green;
+	display: none;
+}
