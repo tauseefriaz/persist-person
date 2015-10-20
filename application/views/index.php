@@ -10,6 +10,7 @@
 	<div class="main">
 		<div>
 			<form id="form-search">
+				<input name="id" id="id" value="">
 				<input class="text-field" type="text" name="firstname" id="firstname" placeholder="First Name" required>
 				<input class="text-field" type="text" name="lastname" id="lastname" placeholder="Last Name" required>
 				<input class="text-field" type="text" name="dob" id="dob"  placeholder="Date Of Birth" required>
@@ -26,13 +27,15 @@
 		  	<td>Last Name</td>
 		  	<td>DOB</td>
 		  	<td>Zip</td>
+		  	<td>Action</td>
 		</tr>
 		<? foreach($personsList as $person): ?>
-		<tr>
+		<tr id="person-<?=$person->id?>">
 		  	<td><?=$person->firstname?></td>
 		  	<td><?=$person->lastname?></td>
 		  	<td><?=date("m/d/Y", $person->dob)?></td>
 		  	<td><?=$person->zip?></td>
+		  	<td><a href="# edit" class="edit" person-id="<?=$person->id?>">Edit</a> | <a href="# delete" class="delete" person-id="<?=$person->id?>">[x]</a></td>
 		</tr>
 		<? endforeach; ?>
 	</table>
