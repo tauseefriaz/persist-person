@@ -10,7 +10,7 @@ $('#form-search').submit(function(){
          success: function(data){
               //alert("Data Save: " + data);
               var html = "";
-              html += '<tr>';
+              html += '<tr id="person-'+data+'">';
 		  	      html += '<td>'+$("#firstname").val()+'</td>';
 		  	      html += '<td>'+$("#lastname").val()+'</td>';
 		  	      html += '<td>'+$("#dob").val()+'</td>';
@@ -34,10 +34,10 @@ $('#form-search').submit(function(){
   	
 });
 
-$('.delete').on('click', function () {
+$(document).on('click', '.delete', function () {
     var id = $(this).attr("person-id");
     var string = 'id='+ id ;
-
+    if(confirm("are you sure you want to delete?")){
     $.ajax({
        type: "POST",
        url: "persons/delete",
@@ -49,11 +49,12 @@ $('.delete').on('click', function () {
         // $('#load').fadeOut();
       }
      });
+  }
 
     
 });
 
-$('.edit').on('click', function () {
+$(document).on('click', '.edit', function () {
     var id = $(this).attr("person-id");
     var string = 'id='+ id ;
 

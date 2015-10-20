@@ -22,6 +22,7 @@ class Persons_model extends CI_Model {
 	public function getPerson($id){
 		$this->db->where('id', $id);
 		$query = $this->db->get('persons');
+		$query->result()[0]->dob = date("m/d/Y", $query->result()[0]->dob);
 		return $query->result();
 	}
 

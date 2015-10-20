@@ -10,7 +10,7 @@
 	<div class="main">
 		<div>
 			<form id="form-search">
-				<input name="id" id="id" value="">
+				<input name="id" id="id" value="" style="display:none;">
 				<input class="text-field" type="text" name="firstname" id="firstname" placeholder="First Name" required>
 				<input class="text-field" type="text" name="lastname" id="lastname" placeholder="Last Name" required>
 				<input class="text-field" type="text" name="dob" id="dob"  placeholder="Date Of Birth" required>
